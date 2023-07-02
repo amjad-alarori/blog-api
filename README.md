@@ -26,30 +26,40 @@ Before running the project, please ensure that you have the following installed:
     ```shell
     cd blog-api
 
-3. Install the project dependencies:
-    ```shell
-    composer install
-
-4. Set up the environment variables:
+3. Set up the environment variables:
     ```shell
     cp .env.example .env
 
-Edit the .env file and configure the database settings and other environment variables as needed.
+use: DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=test_app
+DB_USERNAME=sail
+DB_PASSWORD=password
 
-
-5. Generate the application key:
+4. Run the docker container
     ```shell
-    php artisan key:generate
+    docker compose up -d
 
-6. Start the Laravel Sail containers:
+5. Start the Laravel Sail containers:
     ```shell
    ./vendor/bin/sail up -d
 
-7. Create a new user with administrative privileges:
+6. Install the project dependencies:
+    ```shell
+    composer install
+
+
+7. Generate the application key:
+    ```shell
+    php artisan key:generate
+
+
+8. Create a new user with administrative privileges:
     ```shell
    ./vendor/bin/sail artisan tinker
 
-8. Once in the tinker shell, run the following command:
+9. Once in the tinker shell, run the following command:
     ```shell
    \App\Models\User::create(['username' => 'admin', 'password' => bcrypt('admin')]);
 
