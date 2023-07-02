@@ -24,7 +24,7 @@ Before running the project, please ensure that you have the following installed:
 
 2. Change into the project directory:
     ```shell
-    cd laravel-blog-api
+    cd blog-api
 
 3. Install the project dependencies:
     ```shell
