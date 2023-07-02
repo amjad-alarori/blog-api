@@ -20,7 +20,7 @@ Before running the project, please ensure that you have the following installed:
 1. Clone the repository:
 
    ```shell
-   git clone <repository_url>
+   git clone https://github.com/amjad-alarori/blog-api.git
 
 2. Change into the project directory:
     ```shell
